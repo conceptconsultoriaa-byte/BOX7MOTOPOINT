@@ -71,9 +71,7 @@ header .container{
 nav ul{
 
     display:flex;
-
     gap:30px;
-
     list-style:none;
 
 }
@@ -81,11 +79,17 @@ nav ul{
 nav a{
 
     color:#fff;
-
     text-decoration:none;
-
     font-weight:600;
+    cursor:pointer;
+    transition:all .3s;
 
+}
+
+nav a:hover{
+
+    color:#FFD700;
+     
 }
 
 .btn-menu{
@@ -99,7 +103,9 @@ nav a{
     border-radius:40px;
 
     font-weight:700;
-
+   
+text-decoration:none;
+transition:all .3s; 
 }
 
 .hero{
@@ -148,48 +154,784 @@ nav a{
 
 }
 
-.botoes{
+.hero-buttons{
 
-    display:flex;
+display:flex;
 
-    gap:20px;
+gap:20px;
 
-}
-
-.btn-principal{
-
-    background:#FFD700;
-
-    color:#111;
-
-    padding:18px 40px;
-
-    border-radius:40px;
-
-    text-decoration:none;
-
-    font-weight:700;
+flex-wrap:wrap;
 
 }
 
-.btn-secundario{
+.btn-primary{
 
-    border:2px solid #FFD700;
+background:#FFD700;
 
-    color:#FFD700;
+color:#111;
 
-    padding:18px 40px;
+padding:18px 40px;
 
-    border-radius:40px;
+border-radius:40px;
 
-    text-decoration:none;
+text-decoration:none;
+
+font-weight:700;
+
+transition:all .3s; 
+
+cursor:pointer;
+   
+}
+
+.btn-primary:hover{
+background:#ffcc00;
+transform:translateY(-4px);
+ box-shadow:0 12px 30px rgba(255,215,0,.35);
+   
+}
+
+img{
+    max-width:100%;
+    height:auto;
+    display:block;
+}
+
+.ebook-card img{
+    width:220px;
+    margin:0 auto 25px;
+    transition:.4s;
+}
+
+.ebook-card:hover img{
+    transform:scale(1.05);
+}  
+
+.btn-secondary{
+
+border:2px solid #FFD700;
+
+color:#FFD700;
+
+padding:18px 40px;
+
+border-radius:40px;
+
+text-decoration:none;
+
+font-weight:700;
+
+transition:.3s;
+   
+cursor:pointer;
+}
+
+.btn-menu:hover{
+    background:#ffcc00;
+    transform:translateY(-3px);
+    box-shadow:0 10px 25px rgba(255,215,0,.35);
+}
+ 
+.btn-secondary:hover{
+
+background:#FFD700;
+
+color:#111;
 
 }
 
 .hero img{
 
     width:100%;
-
     border-radius:20px;
+    transition:all .5s ease;
 
 }
+
+.hero img:hover{
+
+    transform:scale(1.03);
+
+}
+
+/* =====================================
+   HERO - ESTATÍSTICAS
+===================================== */
+
+.hero-numbers{
+
+display:flex;
+gap:40px;
+margin-top:50px;
+flex-wrap:wrap;
+
+}
+
+.hero-numbers div{
+
+text-align:center;
+
+}
+
+.hero-numbers h2{
+
+font-size:42px;
+color:#FFD700;
+font-weight:800;
+
+}
+
+.hero-numbers span{
+
+font-size:16px;
+color:#ddd;
+
+}
+
+/* =====================================
+   SEÇÃO SOBRE
+===================================== */
+
+.sobre{
+
+background:#ffffff;
+padding:100px 0;
+
+}
+
+.sobre h2{
+
+font-size:42px;
+text-align:center;
+margin-bottom:25px;
+color:#111;
+
+}
+
+.sobre > .container > p{
+
+max-width:900px;
+margin:0 auto 60px;
+text-align:center;
+font-size:20px;
+color:#666;
+line-height:1.8;
+
+}
+
+/* =====================================
+   CARDS
+===================================== */
+
+.cards{
+
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:30px;
+
+}
+
+.card{
+
+background:#fff;
+padding:35px;
+border-radius:18px;
+box-shadow:0 12px 35px rgba(0,0,0,.10);
+ transition:.35s;
+
+}
+
+.card:hover{
+
+transform:translateY(-10px);
+box-shadow:0 20px 45px rgba(0,0,0,.15);
+
+}
+
+.card h3{
+
+font-size:24px;
+margin-bottom:15px;
+color:#111;
+
+}
+
+.card p{
+
+font-size:17px;
+color:#666;
+line-height:1.6;
+
+}   
+/* =====================================
+   E-BOOKS
+===================================== */
+
+.ebooks{
+
+background:#111;
+padding:100px 0;
+color:#fff;
+
+}
+
+.ebooks h2{
+
+font-size:42px;
+text-align:center;
+margin-bottom:20px;
+color:#FFD700;
+
+}
+
+.subtitulo{
+
+text-align:center;
+font-size:20px;
+color:#ddd;
+margin-bottom:60px;
+
+}
+
+.ebooks-grid{
+
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:35px;
+
+}
+
+.ebook-card{
+
+background:#1c1c1c;
+border-radius:20px;
+padding:35px;
+text-align:center;
+box-shadow:0 15px 35px rgba(0,0,0,.30);
+transition:.35s;
+
+}
+
+.ebook-card:hover{
+
+    transform:translateY(-12px);
+    box-shadow:0 25px 45px rgba(212,175,55,.25);
+
+}
+
+.ebook-card h3{
+
+font-size:24px;
+margin-bottom:20px;
+color:#FFD700;
+
+}
+
+.ebook-card p{
+
+font-size:17px;
+line-height:1.7;
+color:#ddd;
+margin-bottom:30px;
+
+}
+
+.ebook-card .btn-primary{
+
+display:inline-block;
+
+}
+/* =====================================
+   CONSULTORIA
+===================================== */
+
+.consultoria{
+
+padding:100px 0;
+background:#ffffff;
+
+}
+
+.titulo-secao{
+
+text-align:center;
+margin-bottom:70px;
+
+}
+
+.titulo-secao h2{
+
+font-size:42px;
+color:#111;
+margin-bottom:20px;
+
+}
+
+.titulo-secao p{
+
+max-width:900px;
+margin:auto;
+font-size:20px;
+line-height:1.8;
+color:#666;
+
+}
+
+.consultoria-grid{
+
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
+
+}
+
+.consultoria-texto h3{
+
+font-size:34px;
+margin-bottom:30px;
+color:#111;
+
+}
+
+.consultoria-texto ul{
+
+list-style:none;
+padding:0;
+margin-bottom:40px;
+
+}
+
+.consultoria-texto li{
+
+font-size:19px;
+margin-bottom:18px;
+color:#444;
+
+}
+
+.consultoria-imagem{
+
+text-align:center;
+
+}
+
+.consultoria-imagem img{
+
+width:100%;
+max-width:550px;
+border-radius:20px;
+box-shadow:0 20px 40px rgba(0,0,0,.20);
+
+}
+
+/* =====================================
+   MENTORIA
+===================================== */
+
+.mentoria{
+
+padding:100px 0;
+background:#f7f7f7;
+
+}
+
+.mentoria-grid{
+
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:70px;
+align-items:center;
+
+}
+
+.mentoria-grid img{
+
+width:100%;
+max-width:500px;
+border-radius:20px;
+
+}
+
+.cards-mentoria{
+
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:25px;
+margin:35px 0;
+
+}
+
+.cards-mentoria div{
+
+background:#fff;
+padding:25px;
+border-radius:18px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.cards-mentoria h4{
+
+font-size:22px;
+margin-bottom:10px;
+color:#111;
+
+}
+
+/* =====================================
+   DEPOIMENTOS
+===================================== */
+
+.depoimentos{
+
+background:#111;
+padding:100px 0;
+color:#fff;
+
+}
+
+.depoimentos h2{
+
+text-align:center;
+font-size:42px;
+color:#FFD700;
+margin-bottom:20px;
+
+}
+
+.depoimentos> .container> p{
+
+text-align:center;
+margin-bottom:60px;
+font-size:20px;
+color:#ddd;
+
+}
+
+.depoimentos-grid{
+
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:35px;
+
+}
+
+.depoimento{
+
+background:#1d1d1d;
+padding:35px;
+border-radius:20px;
+text-align:center;
+font-size:22px;
+box-shadow:0 15px 35px rgba(0,0,0,.30);
+
+}
+
+.depoimento p{
+
+margin:20px 0;
+font-size:18px;
+line-height:1.8;
+color:#ddd;
+
+}
+
+.depoimento strong{
+
+color:#FFD700;
+font-size:18px;
+
+}
+
+/* =====================================
+   FAQ
+===================================== */
+
+.faq{
+
+padding:100px 0;
+background:#ffffff;
+
+}
+
+.faq-container{
+
+max-width:1000px;
+margin:auto;
+
+}
+
+.faq-item{
+
+background:#fff;
+padding:30px;
+margin-bottom:25px;
+border-radius:15px;
+box-shadow:0 12px 35px rgba(0,0,0,.10);
+
+}
+
+.faq-item h3{
+
+font-size:24px;
+margin-bottom:15px;
+color:#111;
+
+}
+
+.faq-item p{
+
+font-size:18px;
+line-height:1.7;
+color:#666;
+
+}
+
+/* =====================================
+   CTA FINAL
+===================================== */
+
+.cta-final{
+
+background:#FFD700;
+padding:100px 0;
+text-align:center;
+
+}
+
+.cta-final h2{
+
+font-size:52px;
+margin-bottom:25px;
+color:#111;
+
+}
+
+.cta-final p{
+
+font-size:22px;
+max-width:900px;
+margin:0 auto 45px;
+line-height:1.8;
+
+}
+
+.cta-final .hero-buttons{
+
+justify-content:center;
+
+}
+
+.cta-final .btn-secondary{
+
+border:2px solid #111;
+color:#111;
+
+}
+
+.cta-final .btn-secondary:hover{
+
+background:#111;
+color:#FFD700;
+
+}
+
+/* =====================================
+   FOOTER
+===================================== */
+
+footer{
+
+background:#111;
+color:#fff;
+padding:70px 0 40px;
+
+}
+
+.footer-grid{
+
+display:grid;
+grid-template-columns:2fr 1fr 1fr;
+gap:60px;
+margin-bottom:40px;
+
+}
+
+.footer-grid h3{
+
+font-size:30px;
+color:#FFD700;
+margin-bottom:20px;
+
+}
+
+.footer-grid h4{
+
+margin-bottom:20px;
+color:#FFD700;
+
+}
+
+.footer-grid p,
+.footer-grid li{
+
+font-size:17px;
+line-height:2;
+color:#ddd;
+list-style:none;
+
+}
+
+footer hr{
+
+border:none;
+height:1px;
+background:#333;
+margin:30px 0;
+
+}
+
+.copyright{
+
+text-align:center;
+color:#888;
+font-size:15px;
+
+}
+
+/* =====================================
+   RESPONSIVO
+===================================== */
+
+@media(max-width:992px){
+
+.hero-grid,
+.consultoria-grid,
+.mentoria-grid,
+.footer-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.cards{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.ebooks-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.depoimentos-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.hero h1{
+
+font-size:46px;
+line-height:55px;
+
+}
+
+.hero{
+
+text-align:center;
+
+}
+
+.hero-buttons{
+
+justify-content:center;
+
+}
+
+.hero-numbers{
+
+justify-content:center;
+
+}
+
+header .container{
+
+flex-direction:column;
+gap:20px;
+
+}
+
+nav ul{
+
+flex-wrap:wrap;
+justify-content:center;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.cards{
+
+grid-template-columns:1fr;
+
+}
+
+.cards-mentoria{
+
+grid-template-columns:1fr;
+
+}
+
+.hero h1{
+
+font-size:36px;
+line-height:45px;
+
+}
+
+.hero p{
+
+font-size:18px;
+
+}
+
+.titulo-secao h2,
+.sobre h2,
+.ebooks h2,
+.depoimentos h2,
+.cta-final h2{
+
+font-size:34px;
+
+}
+
+.btn-primary,
+.btn-secondary{
+
+display:block;
+width:100%;
+text-align:center;
+
+}
+
+.hero-buttons{
+
+flex-direction:column;
+
+}
+
+nav{
+
+display:none;
+
+}
+
+}
+
+
