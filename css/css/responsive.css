@@ -1,0 +1,136 @@
+/* ==========================================
+   BOX7 MOTO POINT
+   RESPONSIVE.CSS
+========================================== */
+
+/* Tablets */
+@media (max-width: 992px){
+
+header{
+padding:15px 30px;
+}
+
+.hero{
+padding:80px 30px;
+}
+
+.hero h1{
+font-size:48px;
+line-height:56px;
+}
+
+.hero p{
+font-size:20px;
+}
+
+.cards{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:20px;
+}
+
+}
+
+/* Celulares */
+
+@media (max-width:768px){
+
+header{
+
+flex-direction:column;
+
+padding:20px;
+
+}
+
+.menu{
+
+display:flex;
+
+flex-direction:column;
+
+gap:15px;
+
+margin-top:20px;
+
+}
+
+.hero{
+
+padding:60px 20px;
+
+text-align:center;
+
+}
+
+.hero h1{
+
+font-size:36px;
+
+line-height:42px;
+
+}
+
+.hero p{
+
+font-size:18px;
+
+}
+
+.btn{
+
+width:100%;
+
+display:block;
+
+text-align:center;
+
+padding:18px;
+
+}
+
+.cards{
+
+grid-template-columns:1fr;
+
+}
+
+section{
+
+padding:70px 25px;
+
+}
+
+footer{
+
+text-align:center;
+
+}
+
+}
+
+/* Smartphones pequenos */
+
+@media (max-width:480px){
+
+.hero h1{
+
+font-size:30px;
+
+line-height:35px;
+
+}
+
+.hero p{
+
+font-size:16px;
+
+}
+
+section{
+
+padding:50px 15px;
+
+}
+
+}
