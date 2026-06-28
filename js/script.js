@@ -1,48 +1,92 @@
+/*==========================================
+ BOX7 Moto Point
+ script.js
+==========================================*/
 
-// ======================================
-// BOX7 Moto Point
-// Script Principal
-// ======================================
+document.addEventListener("DOMContentLoaded", () => {
 
-// Scroll suave
-document.querySelectorAll('a[href^="#"]').forEach(link => {
+    headerScroll();
+    smoothScroll();
+    revealAnimation();
 
-    link.addEventListener('click', function(e){
+});
 
-        e.preventDefault();
+/*==============================
+ Header Inteligente
+==============================*/
 
-        const destino = document.querySelector(this.getAttribute('href'));
+function headerScroll(){
 
-        if(destino){
+    const header = document.querySelector("header");
 
-            destino.scrollIntoView({
-                behavior:"smooth"
-            });
+    window.addEventListener("scroll", () => {
 
+        if(window.scrollY > 80){
+            header.classList.add("scroll");
+        }else{
+            header.classList.remove("scroll");
         }
 
     });
 
-});
+}
 
-// Efeito no Header
+/*==============================
+ Scroll Suave
+==============================*/
 
-window.addEventListener("scroll",()=>{
+function smoothScroll(){
 
-    const header=document.querySelector("header");
+    const links = document.querySelectorAll('a[href^="#"]');
 
-    if(!header) return;
+    links.forEach(link => {
 
-    if(window.scrollY>80){
+        link.addEventListener("click", function(e){
 
-        header.classList.add("ativo");
+            e.preventDefault();
 
-    }else{
+            const destino = document.querySelector(this.getAttribute("href"));
 
-        header.classList.remove("ativo");
+            if(destino){
 
-    }
+                destino.scrollIntoView({
+                    behavior:"smooth"
+                });
 
-});
+            }
 
-console.log("BOX7 Moto Point carregado.");
+        });
+
+    });
+
+}
+
+/*==============================
+ Scroll Reveal
+==============================*/
+
+function revealAnimation(){
+
+    const itens = document.querySelectorAll(
+        ".card, .ebook-card, .depoimento, .faq-item, .consultoria, .mentoria"
+    );
+
+    const observer = new IntersectionObserver((entries)=>{
+
+        entries.forEach(entry=>{
+
+            if(entry.isIntersecting){
+                entry.target.classList.add("show");
+            }
+
+        });
+
+    },{
+
+        threshold:0.2
+
+    });
+
+    itens.forEach(item => observer.observe(item));
+
+}
