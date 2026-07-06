@@ -2331,27 +2331,23 @@ console.log(leadData);
     const WEBHOOK_URL = 'https://script.google.com/macros/s/AKfycbxnKEoQIma6wI9SF3jvLENzBQls4n8WylZrEJYrjNQO_ISDFXkR_Gj77fl6ECFBXZm1/exec';
 
     if (WEBHOOK_URL && !WEBHOOK_URL.startsWith('COLE_')) {
-    fetch(WEBHOOK_URL, {
-  method: 'POST',
-  headers: {
-    'Content-Type': 'application/json'
-  },
-  body: JSON.stringify(leadData)
-})
-.then(async response => {
-  console.log("STATUS:", response.status);
-  console.log("OK:", response.ok);
+  
+  fetch(WEBHOOK_URL, {
+    method: 'POST',
+    mode: 'no-cors',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(leadData)
+  })
+  .then(() => {
+    console.log("Lead enviado para Apps Script");
+  })
+  .catch(err => {
+    console.error("Erro ao enviar:", err);
+  });
 
-  try {
-    const txt = await response.text();
-    console.log("RESPOSTA:", txt);
-  } catch(e) {
-    console.log("Sem resposta");
-  }
-})
-.catch(err => {
-  console.error("ERRO FETCH:", err);
-});
+}
 
 } 
     // 🔌 HOOKS ALTERNATIVOS · serviços profissionais
